@@ -6,13 +6,15 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        use: "ts-loader",
         include: [path.resolve(__dirname, "src")],
+        use: "ts-loader",
       },
     ],
   },
   output: {
+    publicPath: "/public/",
     filename: "bundle.js",
     path: path.resolve(__dirname, "public"),
   },
+  mode: "development",
 };
